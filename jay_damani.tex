@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage{geometry}
-\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\geometry{left=1in,right=1in,top=0.5in,bottom=0.5in}
 \usepackage{url}
 \usepackage{hyperref}
 \hypersetup{
@@ -9,96 +9,101 @@ linkcolor=,
 filecolor=magenta,
 urlcolor=black,
 }
-
-\fontfamily{Noto Sans}
+\usepackage{tabularx}
+\newcommand{\tablesection}[1]{\multicolumn{3}{l}{\ #1} \\[4pt]}
 \usepackage{fontawesome5}
-\setlength{\tabcolsep}{20pt}
+\setlength{\parskip}{0pt}
 \begin{document}
 
-\centerline {\Huge {Jay Damani}}
-\centerline {\small 
-    \faIcon{envelope} \href{mailto:jaydamani567@gmail.com}{jaydamani567@gmail.com} 
-%}
-%\centerline{
+\centerline{\Huge {Jay Damani}}
+\centerline{\small
+    \faIcon{envelope} \href{mailto:jaydamani567@gmail.com}{jaydamani567@gmail.com}
+    %}
+    %\centerline{
     \faIcon{phone-alt} \href{tel:+91-9727587540}{+91 9727-587-540}
 }
 \centerline{
-    \faIcon{github} \href{https://github.com/jaydamani}{jaydamani} 
+    \faIcon{github} \href{https://github.com/jaydamani}{jaydamani}
 }
 \par\noindent\rule{\textwidth}{1pt}
 
 \section*{\faIcon{edit} Summary}
 
-Passionate as well as detail-oriented software developer with 
-more than 8 months of professional experience in web development/scripting and 
-2 years of experience from self-learning NodeJS, React-native 
-and programming languages like rust, R  and Haskell. 
+Passionate as well as detail-oriented software developer with
+more than 8 months of professional experience in web development/scripting and
+2 years of experience from self-learning NodeJS, React-native
+and programming languages like rust, R  and Haskell.
 
 \section*{\faIcon{users} Experience}
 
-\textbf{Developer}, StayinFront \hfill \textbf{August 2022 -- Present} \
+\textbf{Developer}, StayinFront \hfill \textbf{August 2022--Present} \
 \begin{itemize}
-\item Created or updated existing interactive dashboards using JQuery, HTML and CSS in their custom environment
-\item Collaborated with and helped team members to troubleshoot and resolve issues
-\item Participated in peer code reviews and contributed to codebase improvements
-\item Wrote SQL queries to update data as per client's requirements
+    \item Created or updated existing interactive dashboards using JQuery, HTML and CSS in their custom environment
+    \item Collaborated with and helped team members to troubleshoot and resolve issues
+    \item Wrote SQL queries to update data as per client's requirements
 \end{itemize}
 
 \section*{\faIcon{cogs} Skills}
 \begin{itemize}
-\item Experienced in working with CLI
-\item Fluent in reading, writing and speaking English, Hindi and Gujarati
-\item Good understanding of OOP and Functional programming
-\item Strong problem-solving skills and ability to work in a team environment.
+    \item Experienced in working with CLI
+    \item Fluent in reading, writing and speaking English, Hindi and Gujarati
+    \item Good understanding of OOP and Functional programming
+    \item Strong problem-solving skills and ability to work in a team environment.
 \end{itemize}
 
 \section*{\faIcon{layer-group} Tech Stack}
 \begin{itemize}
-%\item Experienced with Expo Go, React Native and React
-\item Knowledgeable in
+    \item Knowledgeable in
 
-\begin{tabular}{l l l l l}
-    HTML & CSS & Javascript & Typescript & JQuery \\
-    NodeJS & Express & npm & Yarn & SQL \\
-    Git & GitHub & Linux & Bash & ZSH \\
-    SVN & VBScript & MongoDB & RegExp & Tex \\
-\end{tabular}
+          \begin{tabularx}{0.9\textwidth}{XXXXX}
+              HTML       & NodeJS  & Git     & Linux & JQuery   \\
+              CSS        & Express & GitHub  & Bash  & RegExp   \\
+              Javascript & npm     & SQL     & ZSH   & VBScript \\
+              Typescript & Yarn    & MongoDB & Tex   & SVN      \\
+          \end{tabularx}
+    \item Basic understanding of
 
-\item Basic understanding of 
-
-\begin{tabular}{l l l l l}
-    ReactJS & Haskell & React-native & Rust  & R  
-\end{tabular}
+          \begin{tabularx}{0.9\textwidth}{XXXXX}
+              ReactJS & React-Native & Haskell & Rust & R
+          \end{tabularx}
 
 \end{itemize}
-
 \section*{\faIcon{graduation-cap} Education}
 
+% \subsection*{B.Sc in Mathematics - GASC, Ahmedabad\hfill \textbf{April 2023}}
+
+% CGPA: *Not declared yet*
+
+% \subsection*{HSC - South International School\hfill \textbf{April 2023}}
+
+% Total Percentage: 69\%
+
+% \subsection*{SSC - P.K. Patel and U.D. Bhatt Secondary School\hfill \textbf{April 2023}}
+
+% Total Percentage: 78\%
+
 \begin{description}
-\item[Bachelor of Science in Mathematics] \hfill  \textbf{April 2023} \\
-    Gujarat Arts and Science College, Ahmedabad 
-
-    CGPA: *Not declared yet*
-\item[Higher secondary education] \hfill \textbf{March 2020} \\
-    South Internation School
-
-    Total Percentage: 69\%
-\item[Secondary education] \hfill \textbf{March 2018} \\
-    P.K Patel and U.D. Bhatt Secondary School
-
-    Total Percentage: 78\%
+    \item[Bachelor of Science in Mathematics] \hfill  \textbf{April 2023} \\
+        Gujarat Arts and Science College, Ahmedabad
+        \\ Total CGPA\@: 7.29\%
+    \item[Higher secondary education] \hfill \textbf{March 2020} \\
+        South Internation School
+        \\ Total Percentage: 69\%
+    \item[Secondary education] \hfill \textbf{March 2018} \\
+        P.K Patel and U.D. Bhatt Secondary School
+        \\ Total Percentage: 78\%
 \end{description}
 
 
 \section*{\faIcon{info} Certificates}
-    \begin{description}
-        \item[FreeCodeCamp] 
+\begin{description}
+    \item[FreeCodeCamp]
         \href{https://www.freecodecamp.org/certification/jaydamani/javascript-algorithms-and-data-structures}{
             Javascript Algorithms and Data Structures
         }
-        \item[FreeCodeCamp] 
+    \item[FreeCodeCamp]
         \href{https://www.freecodecamp.org/certification/jaydamani/back-end-development-and-apis}{
-            Back End Development and APIs
+            Back End Development and APIs (using NodeJS, Express and MongoDB)
         }
-    \end{description}
+\end{description}
 \end{document}
