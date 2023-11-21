@@ -1,5 +1,5 @@
 .vscode
-
+*_.txt
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
