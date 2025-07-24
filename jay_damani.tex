@@ -8,20 +8,29 @@
 \usepackage{enumitem}
 \usepackage{bookmark}
 \usepackage{fancyhdr}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage{crimson}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
 \geometry{
     includehead,
     % showframe,
-    margin=0.5in,
-    headheight=35pt
+    margin=0.4in,
+    headheight=50pt
 }
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 % \renewcommand{\headrulewidth}{1pt}
 % \renewcommand{\footrulewidth}{0pt}
-
-% \setitemize{itemsep=0.1pt}
+\newcommand{\experiencetitle}[4]{\subsection{\texorpdfstring{#1\hfill \small \textmd{#4} \\
+	\textmd{#3} \hfill \textmd{#2}}{#1}}}
+\setitemize{itemsep=0pt}
 \setcounter{secnumdepth}{0}
 
 \hypersetup{
@@ -37,101 +46,122 @@ urlcolor=black,
 \begin{document}
 
 \fancyhead[L]{
-	\Huge Jay Damani \\
-	\normalsize Software Engineer
+	% \normalsize Software Engineer
 }
 
 \fancyhead[C]{
+	\Huge Jay Damani \\ \normalsize
+	\href{tel:+91-9727587540}{+91 97275-87540 }
+	\href{mailto:jaydamani567@gmail.com}{jaydamani567@gmail.com } \\
+	Ahmedabad, Gujarat, India
 }
 
 \fancyhead[R]{
-	Ahmedabad, Gujarat, India \\
-	\href{mailto:jaydamani567@gmail.com}{jaydamani567@gmail.com} \\
-	\href{tel:+91-9727587540}{+91 97275-87540}
-	% \faIcon{github}\href{https://github.com/jaydamani}{/jaydamani} \\
-	% \faIcon{linkedin}\href{https://www.linkedin.com/in/damani-jay/}{damani-jay}
 }
 
-\section{Summary}
-
-A generalist software developer with expertise in Back-end using JavaScript, Python and SQL.
+% \section{Summary}
+\noindent
+A software developer with expertise in Back-end using NodeJS, Python and SQL.
 
 \section{Experience}
-\noindent
-\textbf{Bosc Tech Labs} \hfill Gandhinagar, Gujarat \\
-Full Stack Developer \hfill Apr 2024 -- Jun 2025 \\
-\textbf{GetEmail} \\
-GetEmail is a chrome extension to get prospect's work email address using data from crawlers and machine learning
+\experiencetitle{Bosc Tech Labs}{Gandhinagar, Gujarat}{Full Stack Developer}{Apr 2024 -- Present}
+% \subsection{Bosc Tech Labs\hfill \small \textmd{Gandhinagar, Gujarat} \\
+% 	\textmd{Full Stack Developer} \hfill \textmd{Apr 2024 -- Present}}
+\subsubsection{GetEmail.io}
+A Chrome extension that finds professional email addresses from linkedin profiles
 \begin{itemize}
-	% \item Integrated extension with LinkedIn to get email from profile
-	\item Created LLM based agent using AWS Bedrock to help write personalized emails
-	      % \item Created Zapier and Make integrations for the product enabling users to create their own automations
-	\item Designed and implemeted analytics and issue monitoring dashboard using Redash and SQL
-	\item Backend: AWS Lambda/serverless, Postgres, NodeJS
+	\item Integrated extension with LinkedIn website to gather data
+	      % \item Created LLM based agent using AWS Bedrock to help write personalized emails
+	\item Created Zapier and Make integrations enabling users to create their own automations
+	\item Designed and implemented analytics and issue monitoring dashboard using Redash and SQL
+	\item \textbf{Backend}: AWS Lambda/serverless, Postgres, NodeJS
+	\item \textbf{Monitoring}: Redash
 \end{itemize}
 
-\noindent
-\textbf{Cric Vision} \\
-CricVision is an AI based cricket analysis app that provides shot analysis for user's practice sessions
-\begin{itemize}
-	% \item Integrated extension with LinkedIn to get email from profile
-	\item Created multimodal agent to analyze cricket shots using langchain and gemini
-	      % \item Created Zapier and Make integrations for the product enabling users to create their own automations
-	\item Created chat bot to provide guidance with video tutorials from in-app library
-	\item Backend: GCP cloud function, firestore, NodeJS, Python
-	\item Services: VertexAI
-\end{itemize}
+% \subsubsection{Cric Vision}
+% An AI-powered cricket training app providing per shot performance analysis.
+% \begin{itemize}
+% 	\item Created
+% 	\item Backend: GCP cloud function, firestore, Python, Flask
+% 	\item Services: VertexAI
+% \end{itemize}
 
-\noindent
-\textbf{24/7 AI Healthcare automation} \\
-24/7 AI Healthcare Reception is a voice agent that helps clinics take calls reducing staff workload and increasing reception availability
+\subsubsection{ClinicVoice}
+A voice agent for clinics to automate calls and improve load handling.
 \begin{itemize}
-	\item Spearheaded the development process from architecture design to implementation
-	      % \item Integrated with existing standard practice management software
-	\item Created evaluation system to compare latency and accuracy across services and models
-	\item Backend: AWS EC2, Postgres, Python, FastAPI, Pipecat-ai
-	\item Services: Twilio, OpenAI, AWS Transcribe, Rime
+	% \item Integrated with existing standard practice management software
+	% \item Built a voice pipeline orchestrated with Pipecat using STT, LLM, and TTS
+	\item Implemented RAG using langchain and openai embeddings to answer queries
+	\item Designed an evaluation framework to benchmark model latency and accuracy.
+	\item \textbf{Backend}: AWS EC2, Postgres, Python, FastAPI, Pipecat-ai, langchain
+	\item \textbf{Monitoring}: langfuse, prometheus
+	\item \textbf{Services}: Twilio, OpenAI, AWS Transcribe, Rime
 \end{itemize}
 
 
-\noindent
-\textbf{StayinFront} \hfill Gandhinagar, Gujarat \\
-Full Stack Developer \hfill Aug 2022 -- Apr 2024 \\
-\textbf{Consumer Goods}
-% \huge Consumer Goods \\
+\experiencetitle{StayinFront}{Gandhinagar, Gujarat}{Full Stack Developer}{Aug 2022 -- Apr 2024}
+% \textbf{Consumer Goods}
+An enterprise-level CRM platform for consumer goods field sales and admin teams.
 \begin{itemize}
-	\item Redesigned scheduled automation for time-sheet generation to trigger on data updates, reducing admin wait time by up to 1 day
+	\item Redesigned automated timesheet generation to trigger on data updates, slashing admin delays by up to 24 hours.
 	\item Implemented automation to plan field rep's day-to-day based on stores assigned to them
 	\item Spearheaded migration of automation workflows to C\# due to deprecation of VBScript
 	\item Won the Most Valuable Player award for quality of work and exceptional contribution to the ongoing projects
-	\item Backend: C\#, VBScript, .Net Framework, MS SQL
-	\item Frontend: HTML, CSS, Tailwind, JS, JQuery
+	\item \textbf{Backend}: C\#, VBScript, .Net Framework, MS SQL
+	\item \textbf{Frontend}: HTML, CSS, Tailwind, JS, JQuery
 \end{itemize}
 
-\section{Education}
+% \section{Skills}
 
-\begin{description}
-	\item[Bachelor of Science in Mathematics ] \hfill  \textbf{April 2023} \\
-	      Gujarat Arts and Science College, Ahmadabad
-	      \\ Total CGPA\@: 7.29
-	      % \item[Higher secondary education] % \hfill \textbf{March 2020} \\
-	      %     South International School
-	      %     \\ Total Percentage: 69\%
-	      % \item[Secondary education] % \hfill \textbf{March 2018} \\
-	      %     P.K Patel and U.D. Bhatt Secondary School
-	      %     \\ Total Percentage: 78\%
-\end{description}
+% \begin{description}
+% 	\item[Back End:] NodeJS, Express, MongoDB, MS SQL Server
+% 	\item[Front End:] HTML5, CSS3, React, JQuery
+% 	\item[Languages:] Javascript, Typescript, CSharp, SQL
+% 	\item[Tools:] Git, SVN, GitHub, Jest
+% \end{description}
+
+% \section{Projects}
+% \setlength\parindent{0pt}
+
+% \href{https://github.com/jaydamani/TCD}{\textbf{TCD}}
+% \begin{itemize}
+% 	\item TCD is a command based chat-bot that makes common tasks in discord easier.
+% 	\item Language/runtime: JavaScript, NodeJS
+% 	\item Libraries: discord.js, Canvas, SQLite, node-fetch
+% \end{itemize}
+
+% \href{https://github.com/jaydamani/walleteer}{\textbf{Walleteer}}
+% \begin{itemize}
+% 	\item Walleteer is a mobile app to help keep track of transactions.
+% 	\item Language/framework: TypeScript, React Native
+% 	\item Libraries: WaterMelonDB, React Native Paper
+% \end{itemize}
+
+% For more projects, please visit \href{https://github.com/jaydamani}{github.com/jaydamani}
+
+\section{Education}
+% \textfGujarat Arts and Science College \\
+% Bachelor of Science: April 2023
+% \begin{description}
+\textbf{Gujarat Arts and Science College, Ahmadabad} \hfill  \textbf{April 2023} \\
+Bachelor of Science in Mathematics
+% 	      \\ Total CGPA\@: 7.29
+% 	      % \item[Higher secondary education] % \hfill \textbf{March 2020} \\
+% 	      %     South International School
+% 	      %     \\ Total Percentage: 69\%
+% 	      % \item[Secondary education] % \hfill \textbf{March 2018} \\
+% 	      %     P.K Patel and U.D. Bhatt Secondary School
+% 	      %     \\ Total Percentage: 78\%
+% \end{description}
 
 \section{Certificates}
-\begin{description}
-	\item[FreeCodeCamp]
-	      \href{https://www.freecodecamp.org/certification/jaydamani/javascript-algorithms-and-data-structures}{
-		      Javascript Algorithms and Data Structures
-	      }
-	\item[FreeCodeCamp]
-	      \href{https://www.freecodecamp.org/certification/jaydamani/back-end-development-and-apis}{
-		      Back End Development and APIs (using NodeJS, Express and MongoDB)
-	      }
-\end{description}
+\begin{itemize}
+	\item Javascript Algorithms and Data Structures by freecodecamp
+	      % \href{https://www.freecodecamp.org/certification/jaydamani/javascript-algorithms-and-data-structures}{
+	      % }
+	\item Back End Development and APIs by freecodecamp
+	      % \href{https://www.freecodecamp.org/certification/jaydamani/back-end-development-and-apis}{
+	      % }
+\end{itemize}
 
 \end{document}
